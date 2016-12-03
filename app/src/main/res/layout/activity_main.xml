@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.algonquincollege.doir0008.dungeonaccountant.MainActivity"
+    android:background="#303030">
+
+    <ImageView
+        android:layout_width="310dp"
+        android:layout_height="191dp"
+        app:srcCompat="@drawable/scene5"
+        android:layout_marginTop="13dp"
+        android:id="@+id/dungeonView"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="0:25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:id="@+id/timeRemaining"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_above="@+id/dungeonView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_alignTop="@+id/textView" />
+
+    <TextView
+        android:text="Time Before Next Dungeon: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/textView"
+        android:textColor="#95989A"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/dungeonView" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="80dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/dungeonView"
+        android:layout_marginTop="24dp"
+        android:background="#6A6868"
+        android:baselineAligned="false"
+        android:id="@+id/warrior_layout"
+        android:padding="2dp" >
+
+        <TextView
+            android:text="Warrior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:layout_gravity="center_horizontal" />
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="73dp"
+            app:srcCompat="@drawable/warrior"
+            android:id="@+id/imageView2"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:text="Martial Prowess +1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignEnd="@+id/linearLayout"
+            android:id="@+id/warriorSkill_1"
+            android:textSize="8sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:text="Superior Gear +2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/warriorSkill_2"
+            android:textSize="8sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:text="Appraise +3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/warriorSkill_3"
+            android:textColor="#000000"
+            android:textSize="8sp"
+            android:paddingBottom="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="80dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="14dp"
+        android:layout_below="@+id/dungeonView"
+        android:background="#6A6868"
+        android:id="@+id/rogue_layout"
+        android:layout_toEndOf="@+id/warrior_layout"
+        android:padding="2dp">
+
+        <TextView
+            android:text="Rogue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="73dp"
+            app:srcCompat="@drawable/rogue"
+            android:id="@+id/imageView3"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:text="Scouting +1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rogueSkill_1"
+            android:textSize="8sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:text="Guild Contact +2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rogueSkill_2"
+            android:textSize="8sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:text="Smooth Talk +3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rogueSkill_3"
+            android:textSize="8sp"
+            android:textColor="#000000"
+            android:paddingBottom="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="80dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="14dp"
+        android:layout_below="@+id/dungeonView"
+        android:background="#6A6868"
+        android:id="@+id/mage_layout"
+        android:layout_toEndOf="@+id/rogue_layout"
+        android:padding="2dp">
+
+        <TextView
+            android:text="Mage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView13"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="73dp"
+            app:srcCompat="@drawable/mage"
+            android:id="@+id/imageView4"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:text="Superior Casting +1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mageSkill_1"
+            android:textSize="8sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:text="Chronoscrying +2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mageSkill_2"
+            android:textSize="8sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:text="Alchemy +3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mageSkill_3"
+            android:textSize="8sp"
+            android:textColor="#000000"
+            android:paddingBottom="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="80dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="14dp"
+        android:layout_below="@+id/dungeonView"
+        android:background="#6A6868"
+        android:id="@+id/druid_layout"
+        android:layout_toEndOf="@+id/mage_layout"
+        android:padding="2dp">
+
+        <TextView
+            android:text="Druid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView17"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="73dp"
+            app:srcCompat="@drawable/druid"
+            android:id="@+id/imageView5"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:text="Forage +1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/druidSkill_1"
+            android:textSize="8sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:text="Combat Healing +2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/druidSkill_2"
+            android:textSize="8sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:text="Temple Contacts +3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/druidSkill_3"
+            android:textSize="8sp"
+            android:textColor="#000000"
+            android:paddingBottom="10dp" />
+    </LinearLayout>
+
+    <TextView
+        android:text="1000gp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gold"
+        android:textColor="#D4AF37"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/textView21"
+        android:layout_alignBottom="@+id/textView21"
+        android:layout_toStartOf="@+id/timeRemaining"
+        android:layout_marginEnd="11dp" />
+
+    <TextView
+        android:text="Total Gold: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/textView21"
+        android:textColor="#95989A"
+        android:textSize="20sp"
+        android:layout_below="@+id/rogue_layout"
+        android:layout_alignStart="@+id/rogue_layout" />
+
+    <Button
+        android:text="Upgrade Skills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/upgradeButton"
+        android:layout_below="@+id/gold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#525252"
+        android:textColor="#80CBC4"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+</RelativeLayout>
